@@ -110,7 +110,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Crear usuario"/>
                                         <connections>
-                                            <segue destination="7Gl-IK-9Zf" kind="presentation" id="cVa-Fk-E06"/>
+                                            <segue destination="7Gl-IK-9Zf" kind="presentation" identifier="registerUser" id="cVa-Fk-E06"/>
                                         </connections>
                                     </button>
                                 </subviews>

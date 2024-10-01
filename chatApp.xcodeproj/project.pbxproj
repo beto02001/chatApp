@@ -15,6 +15,7 @@
 		DA56AD7D2CAC6C3600110126 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD7C2CAC6C3600110126 /* RegisterViewController.swift */; };
 		DA56AD812CAC703000110126 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD802CAC703000110126 /* Messages.swift */; };
 		DA56AD852CAC713E00110126 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD842CAC713E00110126 /* MessageViewModel.swift */; };
+		DA56AD882CAC837400110126 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD872CAC837400110126 /* Coordinator.swift */; };
 		DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */; };
 		DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */; };
 		DA63EDBF2CAC4B3E00EA7D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBE2CAC4B3E00EA7D09 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		DA56AD7C2CAC6C3600110126 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DA56AD802CAC703000110126 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		DA56AD842CAC713E00110126 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		DA56AD872CAC837400110126 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DA63EDB72CAC4B3E00EA7D09 /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				DA63EDC52CAC4B4000EA7D09 /* LaunchScreen.storyboard */,
 				DA56AD782CAC658000110126 /* Helpers */,
 				DA63EDC82CAC4B4000EA7D09 /* Info.plist */,
+				DA56AD872CAC837400110126 /* Coordinator.swift */,
 			);
 			path = chatApp;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				DA56AD712CAC640D00110126 /* AuthenticationFirebaseDataSource.swift in Sources */,
 				DA56AD752CAC64B300110126 /* AuthenticationRepository.swift in Sources */,
 				DA56AD7A2CAC659700110126 /* BaseAlert.swift in Sources */,
+				DA56AD882CAC837400110126 /* Coordinator.swift in Sources */,
 				DA56AD812CAC703000110126 /* Messages.swift in Sources */,
 				DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */,
 				DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */,

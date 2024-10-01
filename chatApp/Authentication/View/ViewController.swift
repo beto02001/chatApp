@@ -13,11 +13,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     
     enum segueName {
-        static let login = "mainToLogin"
-        static let register = "mainToRegister"
+        static let registerUser = "registerUser"
     }
 
     var autheticationViewModel: AuthenticationViewModel = AuthenticationViewModel()
+    var coordinator: MainCoordinator = MainCoordinator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,12 @@ class ViewController: UIViewController {
     
     func loginUser() {
         autheticationViewModel.loginUser(email: tfUser.text ?? "", password: tfPassword.text ?? "")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueName.registerUser {
+            coordinator.navigateToRegisterView(navigationController: self.navigationController, viewModel: autheticationViewModel, segue: segue)
+        }
     }
     
 }
