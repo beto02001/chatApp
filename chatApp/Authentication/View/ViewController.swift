@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         autheticationViewModel.delegate = self
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func login(_ sender: UIButton) {
@@ -47,6 +48,6 @@ extension ViewController: createAndSignInProtocol {
     }
     
     func succesfulCreate() {
-        autheticationViewModel.showAlertErrorMessage(viewController: self, titleError: .siSePudo, messageError: "Si se pudo")
+        coordinator.navigateToMessagesView(navigationController: self.navigationController, viewModel: self.autheticationViewModel)
     }
 }

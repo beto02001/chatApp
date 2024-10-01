@@ -9,17 +9,16 @@ import Foundation
 import UIKit
 
 protocol Coordinator {
-    func navigateToUserLoginView(navigationController: UINavigationController?, viewModel: AuthenticationViewModel)
+    func navigateToMessagesView(navigationController: UINavigationController?, viewModel: AuthenticationViewModel)
     func navigateToRegisterView(navigationController: UINavigationController?, viewModel: AuthenticationViewModel, segue: UIStoryboardSegue)
 }
 
 
 class MainCoordinator: Coordinator {
     
-    func navigateToUserLoginView(navigationController: UINavigationController?, viewModel: AuthenticationViewModel) {
-        let storyboard = UIStoryboard(name: "UserLoged", bundle: nil)
-        guard let controller = storyboard.instantiateViewController(identifier: "UserLogedSB") as? ChatListViewController else { return }
-        controller.autheticationViewModel = viewModel
+    func navigateToMessagesView(navigationController: UINavigationController?, viewModel: AuthenticationViewModel) {
+        let storyboard = UIStoryboard(name: "Messages", bundle: nil)
+        guard let controller = storyboard.instantiateViewController(identifier: "MessagesSB") as? MessagesViewController else { return }
         navigationController?.popViewController(animated: false)
         navigationController?.pushViewController(controller, animated: true)
     }

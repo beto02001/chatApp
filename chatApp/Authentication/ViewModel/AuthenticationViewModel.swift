@@ -11,7 +11,7 @@ import UIKit
 enum ErrorTitle: String {
     case errorCreateTitle = "Error al crear usuario"
     case errorSignInTitle = "Error al ingresar con usuario"
-    case siSePudo = "Si se pudo"
+    case exito = "Creado con éxito"
 }
 
 protocol createAndSignInProtocol: AnyObject {
@@ -28,6 +28,7 @@ final class AuthenticationViewModel {
     var user: User?
     var messageError: String?
     weak var delegate: createAndSignInProtocol?
+    weak var delegateCreateUser: createAndSignInProtocol?
     weak var delegateUserLoged: UserLoginProtocol?
     
     private let authenticatorRepository: AuthenticationRepository
@@ -46,10 +47,10 @@ final class AuthenticationViewModel {
             switch result {
             case .success(let user):
                 self?.user = user
-                self?.delegate?.succesfulCreate()
+                self?.delegateCreateUser?.succesfulCreate()
             case .failure(let error):
                 self?.messageError = error.localizedDescription
-                self?.delegate?.errorCreate(messageError: self?.messageError ?? "No se puedo encontrar el error", titleError: .errorCreateTitle)
+                self?.delegateCreateUser?.errorCreate(messageError: self?.messageError ?? "No se puedo encontrar el error", titleError: .errorCreateTitle)
             }
         }
     }

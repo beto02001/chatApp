@@ -14,10 +14,11 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var tfRegisterPassword: UITextField!
     
     var autheticationViewModel: AuthenticationViewModel?
+    var coordinator: MainCoordinator = MainCoordinator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        autheticationViewModel?.delegate = self
+        autheticationViewModel?.delegateCreateUser = self
     }
     
     
@@ -37,6 +38,6 @@ extension RegisterViewController: createAndSignInProtocol {
     }
     
     func succesfulCreate() {
-        autheticationViewModel?.showAlertErrorMessage(viewController: self, titleError: .siSePudo, messageError: "crear")
+        autheticationViewModel?.showAlertErrorMessage(viewController: self, titleError: .exito, messageError: "el usuario")
     }
 }
