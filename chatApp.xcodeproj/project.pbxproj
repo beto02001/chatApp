@@ -16,6 +16,11 @@
 		DA63EDD22CAC4B4200EA7D09 /* chatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDD12CAC4B4200EA7D09 /* chatAppTests.swift */; };
 		DA63EDDC2CAC4B4200EA7D09 /* chatAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDDB2CAC4B4200EA7D09 /* chatAppUITests.swift */; };
 		DA63EDDE2CAC4B4200EA7D09 /* chatAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDDD2CAC4B4200EA7D09 /* chatAppUITestsLaunchTests.swift */; };
+		DA63EDEB2CAC520A00EA7D09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA63EDEA2CAC520A00EA7D09 /* GoogleService-Info.plist */; };
+		DA63EDEE2CAC570F00EA7D09 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DA63EDED2CAC570F00EA7D09 /* FirebaseAuth */; };
+		DA63EDF02CAC570F00EA7D09 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = DA63EDEF2CAC570F00EA7D09 /* FirebaseCore */; };
+		DA63EDF22CAC570F00EA7D09 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DA63EDF12CAC570F00EA7D09 /* FirebaseFirestore */; };
+		DA63EDF42CAC570F00EA7D09 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DA63EDF32CAC570F00EA7D09 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,7 @@
 		DA63EDD72CAC4B4200EA7D09 /* chatAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA63EDDB2CAC4B4200EA7D09 /* chatAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatAppUITests.swift; sourceTree = "<group>"; };
 		DA63EDDD2CAC4B4200EA7D09 /* chatAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DA63EDEA2CAC520A00EA7D09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA63EDF02CAC570F00EA7D09 /* FirebaseCore in Frameworks */,
+				DA63EDF42CAC570F00EA7D09 /* FirebaseStorage in Frameworks */,
+				DA63EDEE2CAC570F00EA7D09 /* FirebaseAuth in Frameworks */,
+				DA63EDF22CAC570F00EA7D09 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,7 @@
 		DA63EDB92CAC4B3E00EA7D09 /* chatApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA63EDEA2CAC520A00EA7D09 /* GoogleService-Info.plist */,
 				DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */,
 				DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */,
 				DA63EDBE2CAC4B3E00EA7D09 /* ViewController.swift */,
@@ -143,6 +154,12 @@
 			dependencies = (
 			);
 			name = chatApp;
+			packageProductDependencies = (
+				DA63EDED2CAC570F00EA7D09 /* FirebaseAuth */,
+				DA63EDEF2CAC570F00EA7D09 /* FirebaseCore */,
+				DA63EDF12CAC570F00EA7D09 /* FirebaseFirestore */,
+				DA63EDF32CAC570F00EA7D09 /* FirebaseStorage */,
+			);
 			productName = chatApp;
 			productReference = DA63EDB72CAC4B3E00EA7D09 /* chatApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +232,9 @@
 				Base,
 			);
 			mainGroup = DA63EDAE2CAC4B3E00EA7D09;
+			packageReferences = (
+				DA63EDEC2CAC570F00EA7D09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DA63EDB82CAC4B3E00EA7D09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA63EDC42CAC4B4000EA7D09 /* Assets.xcassets in Resources */,
+				DA63EDEB2CAC520A00EA7D09 /* GoogleService-Info.plist in Resources */,
 				DA63EDC72CAC4B4000EA7D09 /* Base in Resources */,
 				DA63EDC22CAC4B3E00EA7D09 /* Base in Resources */,
 			);
@@ -368,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -425,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -444,11 +465,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chatApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +479,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = luis.humberto.chatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,11 +498,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chatApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,6 +512,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = luis.humberto.chatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,7 +530,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = luis.humberto.chatAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,7 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = luis.humberto.chatAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,6 +634,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA63EDEC2CAC570F00EA7D09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DA63EDED2CAC570F00EA7D09 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA63EDEC2CAC570F00EA7D09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DA63EDEF2CAC570F00EA7D09 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA63EDEC2CAC570F00EA7D09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		DA63EDF12CAC570F00EA7D09 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA63EDEC2CAC570F00EA7D09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		DA63EDF32CAC570F00EA7D09 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA63EDEC2CAC570F00EA7D09 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DA63EDAF2CAC4B3E00EA7D09 /* Project object */;
 }
