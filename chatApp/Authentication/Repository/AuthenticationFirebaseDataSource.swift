@@ -15,7 +15,8 @@ final class AuthenticationFirebaseDataSource {
     //--------------------------------------------------------------------------
     func getCurrentUser() -> User? {
         guard let email = Auth.auth().currentUser?.email else { return .none }
-        return .init(email: email)
+        guard let uid = Auth.auth().currentUser?.uid else { return .none }
+        return .init(email: email, idUser: uid)
     }
     
     func createNewUsers(email: String, password: String, completionBlock: @escaping (Result<User, Error>) -> Void) {
@@ -26,8 +27,9 @@ final class AuthenticationFirebaseDataSource {
                 return
             }
             let email = authDataResult?.user.email ?? "no hay email"
+            let idUser = authDataResult?.user.uid ?? "no hay id"
             print("Nuevo usuario creado: ", email)
-            completionBlock(.success(.init(email: email)))
+            completionBlock(.success(.init(email: email, idUser: idUser)))
         }
     }
     
@@ -39,7 +41,8 @@ final class AuthenticationFirebaseDataSource {
                 completionBlock(.failure(error))
             }
             let email = authDataResult?.user.email ?? "no hay email"
-            completionBlock(.success(.init(email: email)))
+            let idUser = authDataResult?.user.uid ?? "no hay id"
+            completionBlock(.success(.init(email: email, idUser: idUser)))
         }
     }
     

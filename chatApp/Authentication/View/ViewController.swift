@@ -13,15 +13,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     
     enum segueName {
-        static let login = "mainToLogin"
-        static let register = "mainToRegister"
+        static let registerUser = "registerUser"
     }
 
     var autheticationViewModel: AuthenticationViewModel = AuthenticationViewModel()
+    var coordinator: MainCoordinator = MainCoordinator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         autheticationViewModel.delegate = self
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func login(_ sender: UIButton) {
@@ -30,6 +31,12 @@ class ViewController: UIViewController {
     
     func loginUser() {
         autheticationViewModel.loginUser(email: tfUser.text ?? "", password: tfPassword.text ?? "")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueName.registerUser {
+            coordinator.navigateToRegisterView(navigationController: self.navigationController, viewModel: autheticationViewModel, segue: segue)
+        }
     }
     
 }
@@ -41,6 +48,6 @@ extension ViewController: createAndSignInProtocol {
     }
     
     func succesfulCreate() {
-        autheticationViewModel.showAlertErrorMessage(viewController: self, titleError: .siSePudo, messageError: "Si se pudo")
+        coordinator.navigateToMessagesView(navigationController: self.navigationController, viewModel: self.autheticationViewModel)
     }
 }
