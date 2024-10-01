@@ -7,33 +7,42 @@
 
 import Foundation
 import FirebaseFirestore
-import FirebaseSharedSwift
 
-
+protocol MessageViewModelDelegate: AnyObject {
+    func didReceiveMessages(_ messages: [Messages])
+    func didFailWithError(_ error: String)
+    func didUpdateLastMessageId(_ lastId: String)
+}
 
 final class MessageViewModel {
     
-    @Published var showChatApp = false
-    @Published var messages : [Messages] = []
-    @Published var lastId = ""
+    weak var delegate: MessageViewModelDelegate?
     
-    let db = Firestore.firestore()
+    var messages: [Messages] = []
+    private var lastId: String = ""
     
-    init(){
+    private let db = Firestore.firestore()
+    
+    init() {
         getMessages()
     }
     
     func getMessages() {
-        db.collection("messages").addSnapshotListener { QuerySnapshot, error in
+        db.collection("messages").addSnapshotListener { [weak self] QuerySnapshot, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                self.delegate?.didFailWithError("Error al obtener mensajes: \(error.localizedDescription)")
+                return
+            }
             
             guard let documents = QuerySnapshot?.documents else { return }
             
-            //FirebaseFirestoreSwift
             self.messages = documents.compactMap({ document -> Messages? in
-                do{
+                do {
                     return try document.data(as: Messages.self)
-                }catch {
-                    print("no funciona el get", error.localizedDescription)
+                } catch {
+                    print("Error al decodificar el mensaje", error.localizedDescription)
                     return nil
                 }
             })
@@ -42,22 +51,19 @@ final class MessageViewModel {
             
             if let id = self.messages.last?.id {
                 self.lastId = id
+                self.delegate?.didUpdateLastMessageId(self.lastId)
             }
             
+            self.delegate?.didReceiveMessages(self.messages)
         }
     }
     
-    func sendMessage(text: String){
-        do{
-            guard let idUser = UserDefaults.standard.string(forKey: "idUser") else { return  }
-            guard let username = UserDefaults.standard.string(forKey: "username") else { return  }
-            
-            let newMessage = Messages(id: "\(UUID())", text: text, username: username, idUser: idUser, timestmap: Date())
-            
+    func sendMessage(text: String, user: User) {
+        do {
+            let newMessage = Messages(id: "\(UUID())", text: text, username: user.email, idUser: user.idUser, timestmap: Date())
             try db.collection("messages").document().setData(from: newMessage)
-        }catch let error as NSError {
-            print("Error al guardar", error.localizedDescription)
+        } catch let error as NSError {
+            delegate?.didFailWithError("Error al enviar mensaje: \(error.localizedDescription)")
         }
     }
-    
 }
