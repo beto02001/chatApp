@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA56AD712CAC640D00110126 /* AuthenticationFirebaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD702CAC640D00110126 /* AuthenticationFirebaseDataSource.swift */; };
+		DA56AD732CAC647500110126 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD722CAC647500110126 /* AuthenticationModel.swift */; };
+		DA56AD752CAC64B300110126 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD742CAC64B300110126 /* AuthenticationRepository.swift */; };
+		DA56AD772CAC654A00110126 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD762CAC654A00110126 /* AuthenticationViewModel.swift */; };
+		DA56AD7A2CAC659700110126 /* BaseAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD792CAC659700110126 /* BaseAlert.swift */; };
+		DA56AD7D2CAC6C3600110126 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD7C2CAC6C3600110126 /* RegisterViewController.swift */; };
+		DA56AD812CAC703000110126 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD802CAC703000110126 /* Messages.swift */; };
+		DA56AD852CAC713E00110126 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD842CAC713E00110126 /* MessageViewModel.swift */; };
 		DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */; };
 		DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */; };
 		DA63EDBF2CAC4B3E00EA7D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBE2CAC4B3E00EA7D09 /* ViewController.swift */; };
@@ -41,6 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA56AD702CAC640D00110126 /* AuthenticationFirebaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebaseDataSource.swift; sourceTree = "<group>"; };
+		DA56AD722CAC647500110126 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		DA56AD742CAC64B300110126 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		DA56AD762CAC654A00110126 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		DA56AD792CAC659700110126 /* BaseAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAlert.swift; sourceTree = "<group>"; };
+		DA56AD7C2CAC6C3600110126 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DA56AD802CAC703000110126 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		DA56AD842CAC713E00110126 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		DA63EDB72CAC4B3E00EA7D09 /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +102,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA56AD6C2CAC639400110126 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD7B2CAC666400110126 /* View */,
+				DA56AD6F2CAC63B600110126 /* ViewModel */,
+				DA56AD6E2CAC63AA00110126 /* Model */,
+				DA56AD6D2CAC639E00110126 /* Repository */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		DA56AD6D2CAC639E00110126 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD702CAC640D00110126 /* AuthenticationFirebaseDataSource.swift */,
+				DA56AD742CAC64B300110126 /* AuthenticationRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DA56AD6E2CAC63AA00110126 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD722CAC647500110126 /* AuthenticationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA56AD6F2CAC63B600110126 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD762CAC654A00110126 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DA56AD782CAC658000110126 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD792CAC659700110126 /* BaseAlert.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DA56AD7B2CAC666400110126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA63EDBE2CAC4B3E00EA7D09 /* ViewController.swift */,
+				DA63EDC02CAC4B3E00EA7D09 /* Main.storyboard */,
+				DA56AD7C2CAC6C3600110126 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA56AD7E2CAC701600110126 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD822CAC70D200110126 /* MessagesViewModel */,
+				DA56AD7F2CAC702000110126 /* Model */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		DA56AD7F2CAC702000110126 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD802CAC703000110126 /* Messages.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA56AD822CAC70D200110126 /* MessagesViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD842CAC713E00110126 /* MessageViewModel.swift */,
+			);
+			path = MessagesViewModel;
+			sourceTree = "<group>";
+		};
 		DA63EDAE2CAC4B3E00EA7D09 = {
 			isa = PBXGroup;
 			children = (
@@ -109,13 +204,14 @@
 		DA63EDB92CAC4B3E00EA7D09 /* chatApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA56AD7E2CAC701600110126 /* Messages */,
+				DA56AD6C2CAC639400110126 /* Authentication */,
 				DA63EDEA2CAC520A00EA7D09 /* GoogleService-Info.plist */,
 				DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */,
 				DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */,
-				DA63EDBE2CAC4B3E00EA7D09 /* ViewController.swift */,
-				DA63EDC02CAC4B3E00EA7D09 /* Main.storyboard */,
 				DA63EDC32CAC4B4000EA7D09 /* Assets.xcassets */,
 				DA63EDC52CAC4B4000EA7D09 /* LaunchScreen.storyboard */,
+				DA56AD782CAC658000110126 /* Helpers */,
 				DA63EDC82CAC4B4000EA7D09 /* Info.plist */,
 			);
 			path = chatApp;
@@ -279,7 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA56AD852CAC713E00110126 /* MessageViewModel.swift in Sources */,
+				DA56AD7D2CAC6C3600110126 /* RegisterViewController.swift in Sources */,
 				DA63EDBF2CAC4B3E00EA7D09 /* ViewController.swift in Sources */,
+				DA56AD732CAC647500110126 /* AuthenticationModel.swift in Sources */,
+				DA56AD772CAC654A00110126 /* AuthenticationViewModel.swift in Sources */,
+				DA56AD712CAC640D00110126 /* AuthenticationFirebaseDataSource.swift in Sources */,
+				DA56AD752CAC64B300110126 /* AuthenticationRepository.swift in Sources */,
+				DA56AD7A2CAC659700110126 /* BaseAlert.swift in Sources */,
+				DA56AD812CAC703000110126 /* Messages.swift in Sources */,
 				DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */,
 				DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */,
 			);
