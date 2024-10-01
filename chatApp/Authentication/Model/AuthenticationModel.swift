@@ -9,4 +9,5 @@ import Foundation
 
 struct User {
     let email: String
+    let idUser: String
 }

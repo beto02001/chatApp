@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UYO-o4-H1J">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,29 +19,125 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4n-qU-KcP">
-                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Opc-ri-6Zq">
+                                <rect key="frame" x="22" y="763.66666666666663" width="349" height="34.333333333333371"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mensaje" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w8u-L0-1FR">
+                                        <rect key="frame" x="0.0" y="0.0" width="260.33333333333331" height="34.333333333333336"/>
+                                        <color key="tintColor" name="pinkColorLV"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2x-IC-fqb">
+                                        <rect key="frame" x="278.33333333333331" y="0.0" width="70.666666666666686" height="34.333333333333336"/>
+                                        <color key="tintColor" name="pinkColorLV"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Enviar">
+                                            <color key="baseBackgroundColor" name="grayPinkBackground"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sendMessage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="h93-yd-UWi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mnh-XN-Nch">
+                                <rect key="frame" x="0.0" y="103" width="393" height="650.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="messageUser" textLabel="gid-06-qWF" style="IBUITableViewCellStyleDefault" id="v4N-Qe-D6E">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v4N-Qe-D6E" id="0Mm-OY-iVy">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="mensaje 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gid-06-qWF">
+                                                    <rect key="frame" x="20" y="0.0" width="353" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x4n-qU-KcP" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="4fV-0H-Z4z"/>
-                            <constraint firstItem="x4n-qU-KcP" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gg8-W1-RRP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Opc-ri-6Zq" secondAttribute="bottom" constant="20" id="IqT-po-1Qv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Opc-ri-6Zq" secondAttribute="trailing" constant="22" id="LNo-8t-Y02"/>
+                            <constraint firstItem="mnh-XN-Nch" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Szl-I2-FEo"/>
+                            <constraint firstItem="mnh-XN-Nch" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WBh-dP-KgP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="mnh-XN-Nch" secondAttribute="trailing" id="YD4-pE-wfS"/>
+                            <constraint firstItem="Opc-ri-6Zq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="22" id="fb6-eS-ale"/>
+                            <constraint firstItem="Opc-ri-6Zq" firstAttribute="top" secondItem="mnh-XN-Nch" secondAttribute="bottom" constant="10" id="laq-9C-KN7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Mensajes" id="DmU-6p-I32">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="LtO-sf-4Cs">
+                            <imageReference key="image" image="door.right.hand.open" catalog="system" renderingMode="hierarchical-single" variableValue="1">
+                                <hierarchicalColors>
+                                    <color name="pinkColorLV"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <connections>
+                                <action selector="logout:" destination="Y6W-OH-hqX" id="lHj-DM-cVw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="IqT-po-1Qv" id="WDd-4H-COT"/>
+                        <outlet property="stackView" destination="Opc-ri-6Zq" id="Ptc-Zm-VX9"/>
+                        <outlet property="tableMessages" destination="mnh-XN-Nch" id="qpw-gF-avO"/>
+                        <outlet property="tfMessage" destination="w8u-L0-1FR" id="TDQ-aq-WZ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-2"/>
+            <point key="canvasLocation" x="1057.2519083969464" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OOK-Ri-Ile">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UYO-o4-H1J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hJz-5z-awA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="pinkColorLV"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="UgP-kj-iJr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsf-Te-sct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <image name="door.right.hand.open" catalog="system" width="108" height="128"/>
+        <namedColor name="grayPinkBackground">
+            <color red="0.97647058823529409" green="0.7686274509803922" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="pinkColorLV">
+            <color red="0.88235294117647056" green="0.0039215686274509803" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

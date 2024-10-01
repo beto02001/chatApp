@@ -19,7 +19,7 @@ class MainCoordinator: Coordinator {
     func navigateToMessagesView(navigationController: UINavigationController?, viewModel: AuthenticationViewModel) {
         let storyboard = UIStoryboard(name: "Messages", bundle: nil)
         guard let controller = storyboard.instantiateViewController(identifier: "MessagesSB") as? MessagesViewController else { return }
-        navigationController?.popViewController(animated: false)
+        controller.autheticationViewModel = viewModel
         navigationController?.pushViewController(controller, animated: true)
     }
 

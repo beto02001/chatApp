@@ -147,6 +147,7 @@
 		DA56AD782CAC658000110126 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				DA63EDC32CAC4B4000EA7D09 /* Assets.xcassets */,
 				DA56AD792CAC659700110126 /* BaseAlert.swift */,
 			);
 			path = Helpers;
@@ -225,7 +226,6 @@
 				DA63EDEA2CAC520A00EA7D09 /* GoogleService-Info.plist */,
 				DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */,
 				DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */,
-				DA63EDC32CAC4B4000EA7D09 /* Assets.xcassets */,
 				DA63EDC52CAC4B4000EA7D09 /* LaunchScreen.storyboard */,
 				DA56AD782CAC658000110126 /* Helpers */,
 				DA63EDC82CAC4B4000EA7D09 /* Info.plist */,
