@@ -9,7 +9,7 @@ Esta es una aplicación de mensajería desarrollada en Swift para iOS. Actualmen
 - **Autenticación de usuarios**
 - **Creación de cuenta**
 - **Inicio de sesión**
-- **Pantalla de mensajes y guardado en Firebase**
+- **Pantalla de mensajes y guardado en Firestore**
 - **Salir de sesión**
 
 ## Requisitos
