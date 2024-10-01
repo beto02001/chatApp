@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Esta es una aplicación de mensajería desarrollada en Swift para iOS. Actualmente, tiene implementada la funcionalidad de autenticación de usuarios a través de correo electrónico utilizando Firebase. Los usuarios pueden crear una cuenta nueva o iniciar sesión con una existente. El objetivo es permitir la comunicación en tiempo real entre usuarios, con futuras características que incluirán el envío de mensajes.
+Esta es una aplicación de mensajería desarrollada en Swift para iOS. Actualmente, tiene implementada la funcionalidad de autenticación de usuarios a través de correo electrónico utilizando Firebase. Los usuarios pueden crear una cuenta nueva o iniciar sesión con una existente.
 
 ## Características actuales
 
