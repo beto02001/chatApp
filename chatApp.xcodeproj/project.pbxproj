@@ -15,6 +15,9 @@
 		DA56AD7D2CAC6C3600110126 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD7C2CAC6C3600110126 /* RegisterViewController.swift */; };
 		DA56AD812CAC703000110126 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD802CAC703000110126 /* Messages.swift */; };
 		DA56AD852CAC713E00110126 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD842CAC713E00110126 /* MessageViewModel.swift */; };
+		DA56AD882CAC837400110126 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD872CAC837400110126 /* Coordinator.swift */; };
+		DA56AD8B2CAC873C00110126 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA56AD8A2CAC873C00110126 /* Messages.storyboard */; };
+		DA56AD8D2CAC875F00110126 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD8C2CAC875F00110126 /* MessagesViewController.swift */; };
 		DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */; };
 		DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */; };
 		DA63EDBF2CAC4B3E00EA7D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBE2CAC4B3E00EA7D09 /* ViewController.swift */; };
@@ -57,6 +60,9 @@
 		DA56AD7C2CAC6C3600110126 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DA56AD802CAC703000110126 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		DA56AD842CAC713E00110126 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		DA56AD872CAC837400110126 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DA56AD8A2CAC873C00110126 /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		DA56AD8C2CAC875F00110126 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		DA63EDB72CAC4B3E00EA7D09 /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 		DA56AD7E2CAC701600110126 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				DA56AD892CAC86F000110126 /* View */,
 				DA56AD822CAC70D200110126 /* MessagesViewModel */,
 				DA56AD7F2CAC702000110126 /* Model */,
 			);
@@ -179,6 +186,15 @@
 				DA56AD842CAC713E00110126 /* MessageViewModel.swift */,
 			);
 			path = MessagesViewModel;
+			sourceTree = "<group>";
+		};
+		DA56AD892CAC86F000110126 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA56AD8A2CAC873C00110126 /* Messages.storyboard */,
+				DA56AD8C2CAC875F00110126 /* MessagesViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DA63EDAE2CAC4B3E00EA7D09 = {
@@ -213,6 +229,7 @@
 				DA63EDC52CAC4B4000EA7D09 /* LaunchScreen.storyboard */,
 				DA56AD782CAC658000110126 /* Helpers */,
 				DA63EDC82CAC4B4000EA7D09 /* Info.plist */,
+				DA56AD872CAC837400110126 /* Coordinator.swift */,
 			);
 			path = chatApp;
 			sourceTree = "<group>";
@@ -350,6 +367,7 @@
 				DA63EDC42CAC4B4000EA7D09 /* Assets.xcassets in Resources */,
 				DA63EDEB2CAC520A00EA7D09 /* GoogleService-Info.plist in Resources */,
 				DA63EDC72CAC4B4000EA7D09 /* Base in Resources */,
+				DA56AD8B2CAC873C00110126 /* Messages.storyboard in Resources */,
 				DA63EDC22CAC4B3E00EA7D09 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,12 +395,14 @@
 			files = (
 				DA56AD852CAC713E00110126 /* MessageViewModel.swift in Sources */,
 				DA56AD7D2CAC6C3600110126 /* RegisterViewController.swift in Sources */,
+				DA56AD8D2CAC875F00110126 /* MessagesViewController.swift in Sources */,
 				DA63EDBF2CAC4B3E00EA7D09 /* ViewController.swift in Sources */,
 				DA56AD732CAC647500110126 /* AuthenticationModel.swift in Sources */,
 				DA56AD772CAC654A00110126 /* AuthenticationViewModel.swift in Sources */,
 				DA56AD712CAC640D00110126 /* AuthenticationFirebaseDataSource.swift in Sources */,
 				DA56AD752CAC64B300110126 /* AuthenticationRepository.swift in Sources */,
 				DA56AD7A2CAC659700110126 /* BaseAlert.swift in Sources */,
+				DA56AD882CAC837400110126 /* Coordinator.swift in Sources */,
 				DA56AD812CAC703000110126 /* Messages.swift in Sources */,
 				DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */,
 				DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */,
