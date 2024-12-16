@@ -17,11 +17,12 @@ class ViewController: UIViewController {
     }
 
     var autheticationViewModel: AuthenticationViewModel = AuthenticationViewModel()
-    var coordinator: MainCoordinator = MainCoordinator()
+    var coordinator: Coordinator = MainCoordinator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         autheticationViewModel.delegate = self
+        autheticationViewModel.isUserLogged()
         self.navigationController?.navigationBar.isHidden = true
     }
     
@@ -48,6 +49,6 @@ extension ViewController: createAndSignInProtocol {
     }
     
     func succesfulCreate() {
-        coordinator.navigateToMessagesView(navigationController: self.navigationController, viewModel: self.autheticationViewModel)
+        coordinator.navigateToChatsView(navigationController: self.navigationController, viewModel: self.autheticationViewModel)
     }
 }

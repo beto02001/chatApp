@@ -60,6 +60,7 @@ final class AuthenticationViewModel {
             switch result {
             case .success(let user):
                 self?.user = user
+                UserDefaults().set(true, forKey: "userLogged")
                 self?.delegate?.succesfulCreate()
             case .failure(let error):
                 self?.messageError = error.localizedDescription
@@ -72,6 +73,7 @@ final class AuthenticationViewModel {
         do {
             try authenticatorRepository.logout()
             self.user = nil
+            UserDefaults().set(false, forKey: "userLogged")
         } catch {
             print("Hubo un error")
         }
@@ -80,5 +82,9 @@ final class AuthenticationViewModel {
     
     func showAlertErrorMessage(viewController: UIViewController, titleError: ErrorTitle, messageError: String) {
         AlertView.showAlertErrorMessage(viewController: viewController, titleError: titleError, messageError: messageError)
+    }
+    
+    func isUserLogged() {
+        if UserDefaults().bool(forKey: "userLogged") { delegate?.succesfulCreate() }
     }
 }

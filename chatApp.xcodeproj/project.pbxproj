@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8905E8162D08915F00A0BB4A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8905E8152D08915F00A0BB4A /* ProfileViewController.swift */; };
+		8905E8192D08917B00A0BB4A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8905E8182D08917B00A0BB4A /* Profile.storyboard */; };
+		892356C32CFA498000BFE88E /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892356C22CFA498000BFE88E /* Messages.storyboard */; };
+		892356C52CFA49DB00BFE88E /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892356C42CFA49DB00BFE88E /* MessagesViewController.swift */; };
 		DA56AD712CAC640D00110126 /* AuthenticationFirebaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD702CAC640D00110126 /* AuthenticationFirebaseDataSource.swift */; };
 		DA56AD732CAC647500110126 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD722CAC647500110126 /* AuthenticationModel.swift */; };
 		DA56AD752CAC64B300110126 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD742CAC64B300110126 /* AuthenticationRepository.swift */; };
@@ -16,8 +20,8 @@
 		DA56AD812CAC703000110126 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD802CAC703000110126 /* Messages.swift */; };
 		DA56AD852CAC713E00110126 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD842CAC713E00110126 /* MessageViewModel.swift */; };
 		DA56AD882CAC837400110126 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD872CAC837400110126 /* Coordinator.swift */; };
-		DA56AD8B2CAC873C00110126 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA56AD8A2CAC873C00110126 /* Messages.storyboard */; };
-		DA56AD8D2CAC875F00110126 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD8C2CAC875F00110126 /* MessagesViewController.swift */; };
+		DA56AD8B2CAC873C00110126 /* Chats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA56AD8A2CAC873C00110126 /* Chats.storyboard */; };
+		DA56AD8D2CAC875F00110126 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA56AD8C2CAC875F00110126 /* ChatsViewController.swift */; };
 		DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */; };
 		DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */; };
 		DA63EDBF2CAC4B3E00EA7D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63EDBE2CAC4B3E00EA7D09 /* ViewController.swift */; };
@@ -52,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8905E8152D08915F00A0BB4A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8905E8182D08917B00A0BB4A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		892356C22CFA498000BFE88E /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		892356C42CFA49DB00BFE88E /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		DA56AD702CAC640D00110126 /* AuthenticationFirebaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebaseDataSource.swift; sourceTree = "<group>"; };
 		DA56AD722CAC647500110126 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
 		DA56AD742CAC64B300110126 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
@@ -61,8 +69,8 @@
 		DA56AD802CAC703000110126 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		DA56AD842CAC713E00110126 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		DA56AD872CAC837400110126 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		DA56AD8A2CAC873C00110126 /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
-		DA56AD8C2CAC875F00110126 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		DA56AD8A2CAC873C00110126 /* Chats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chats.storyboard; sourceTree = "<group>"; };
+		DA56AD8C2CAC875F00110126 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		DA63EDB72CAC4B3E00EA7D09 /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA63EDBC2CAC4B3E00EA7D09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8905E8172D08916600A0BB4A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8905E8152D08915F00A0BB4A /* ProfileViewController.swift */,
+				8905E8182D08917B00A0BB4A /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		892356C02CFA491A00BFE88E /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				892356C12CFA492B00BFE88E /* View */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		892356C12CFA492B00BFE88E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				892356C22CFA498000BFE88E /* Messages.storyboard */,
+				892356C42CFA49DB00BFE88E /* MessagesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DA56AD6C2CAC639400110126 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,14 +197,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DA56AD7E2CAC701600110126 /* Messages */ = {
+		DA56AD7E2CAC701600110126 /* Chats */ = {
 			isa = PBXGroup;
 			children = (
 				DA56AD892CAC86F000110126 /* View */,
 				DA56AD822CAC70D200110126 /* MessagesViewModel */,
 				DA56AD7F2CAC702000110126 /* Model */,
 			);
-			path = Messages;
+			path = Chats;
 			sourceTree = "<group>";
 		};
 		DA56AD7F2CAC702000110126 /* Model */ = {
@@ -192,8 +226,9 @@
 		DA56AD892CAC86F000110126 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA56AD8A2CAC873C00110126 /* Messages.storyboard */,
-				DA56AD8C2CAC875F00110126 /* MessagesViewController.swift */,
+				8905E8172D08916600A0BB4A /* Profile */,
+				DA56AD8A2CAC873C00110126 /* Chats.storyboard */,
+				DA56AD8C2CAC875F00110126 /* ChatsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,7 +258,8 @@
 			children = (
 				DA63EDC82CAC4B4000EA7D09 /* Info.plist */,
 				DAE48B532CADCD5C00F468F1 /* GoogleService-Info.plist */,
-				DA56AD7E2CAC701600110126 /* Messages */,
+				892356C02CFA491A00BFE88E /* Messages */,
+				DA56AD7E2CAC701600110126 /* Chats */,
 				DA56AD6C2CAC639400110126 /* Authentication */,
 				DA56AD782CAC658000110126 /* Helpers */,
 				DA63EDBA2CAC4B3E00EA7D09 /* AppDelegate.swift */,
@@ -364,10 +400,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892356C32CFA498000BFE88E /* Messages.storyboard in Resources */,
 				DA63EDC42CAC4B4000EA7D09 /* Assets.xcassets in Resources */,
 				DA63EDC72CAC4B4000EA7D09 /* Base in Resources */,
 				DAE48B542CADCD5C00F468F1 /* GoogleService-Info.plist in Resources */,
-				DA56AD8B2CAC873C00110126 /* Messages.storyboard in Resources */,
+				DA56AD8B2CAC873C00110126 /* Chats.storyboard in Resources */,
+				8905E8192D08917B00A0BB4A /* Profile.storyboard in Resources */,
 				DA63EDC22CAC4B3E00EA7D09 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,15 +433,17 @@
 			files = (
 				DA56AD852CAC713E00110126 /* MessageViewModel.swift in Sources */,
 				DA56AD7D2CAC6C3600110126 /* RegisterViewController.swift in Sources */,
-				DA56AD8D2CAC875F00110126 /* MessagesViewController.swift in Sources */,
+				DA56AD8D2CAC875F00110126 /* ChatsViewController.swift in Sources */,
 				DA63EDBF2CAC4B3E00EA7D09 /* ViewController.swift in Sources */,
 				DA56AD732CAC647500110126 /* AuthenticationModel.swift in Sources */,
 				DA56AD772CAC654A00110126 /* AuthenticationViewModel.swift in Sources */,
 				DA56AD712CAC640D00110126 /* AuthenticationFirebaseDataSource.swift in Sources */,
 				DA56AD752CAC64B300110126 /* AuthenticationRepository.swift in Sources */,
+				892356C52CFA49DB00BFE88E /* MessagesViewController.swift in Sources */,
 				DA56AD7A2CAC659700110126 /* BaseAlert.swift in Sources */,
 				DA56AD882CAC837400110126 /* Coordinator.swift in Sources */,
 				DA56AD812CAC703000110126 /* Messages.swift in Sources */,
+				8905E8162D08915F00A0BB4A /* ProfileViewController.swift in Sources */,
 				DA63EDBB2CAC4B3E00EA7D09 /* AppDelegate.swift in Sources */,
 				DA63EDBD2CAC4B3E00EA7D09 /* SceneDelegate.swift in Sources */,
 			);
